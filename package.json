@@ -1,0 +1,20 @@
+{
+  "name": "settlement-router",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network",
+    "start": "node backend/server.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "hardhat": "2.22.10",
+    "dotenv": "16.4.5"
+  },
+  "dependencies": {
+    "ethers": "6.13.2",
+    "express": "4.19.2"
+  }
+}
