@@ -1,0 +1,10 @@
+[
+  { "slug": "bsc",        "chainId": 56,    "name": "BNB Chain",    "rpcEnv": "RPC_56",    "native": "BNB",  "gasPrice": null },
+  { "slug": "ethereum",   "chainId": 1,     "name": "Ethereum",     "rpcEnv": "RPC_1",     "native": "ETH",  "gasPrice": null },
+  { "slug": "base",       "chainId": 8453,  "name": "Base",         "rpcEnv": "RPC_8453",  "native": "ETH",  "gasPrice": null },
+  { "slug": "arbitrum",   "chainId": 42161, "name": "Arbitrum One", "rpcEnv": "RPC_42161", "native": "ETH",  "gasPrice": null },
+  { "slug": "optimism",   "chainId": 10,    "name": "Optimism",     "rpcEnv": "RPC_10",    "native": "ETH",  "gasPrice": null },
+  { "slug": "polygon",    "chainId": 137,   "name": "Polygon PoS",  "rpcEnv": "RPC_137",   "native": "POL",  "gasPrice": "50000000000" },
+  { "slug": "avalanche",  "chainId": 43114, "name": "Avalanche C",  "rpcEnv": "RPC_43114", "native": "AVAX", "gasPrice": "30000000000" },
+  { "slug": "blast",      "chainId": 81457, "name": "Blast",        "rpcEnv": "RPC_81457", "native": "ETH",  "gasPrice": null }
+]
